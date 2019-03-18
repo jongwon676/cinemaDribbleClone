@@ -13,6 +13,10 @@
 		ADBDAA25223FA16B00F09D8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADBDAA23223FA16B00F09D8C /* Main.storyboard */; };
 		ADBDAA27223FA16B00F09D8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADBDAA26223FA16B00F09D8C /* Assets.xcassets */; };
 		ADBDAA2A223FA16B00F09D8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADBDAA28223FA16B00F09D8C /* LaunchScreen.storyboard */; };
+		ADC5FC91223FA4FB00B23B0F /* View++Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5FC90223FA4FB00B23B0F /* View++Layout.swift */; };
+		ADC5FC94223FA71300B23B0F /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5FC93223FA71300B23B0F /* MovieCell.swift */; };
+		ADC5FC96223FA7B600B23B0F /* UILabel+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5FC95223FA7B600B23B0F /* UILabel+extension.swift */; };
+		ADC5FC98223FADDE00B23B0F /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5FC97223FADDE00B23B0F /* UIStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		ADBDAA26223FA16B00F09D8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADBDAA29223FA16B00F09D8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADBDAA2B223FA16B00F09D8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADC5FC90223FA4FB00B23B0F /* View++Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View++Layout.swift"; sourceTree = "<group>"; };
+		ADC5FC93223FA71300B23B0F /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		ADC5FC95223FA7B600B23B0F /* UILabel+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+extension.swift"; sourceTree = "<group>"; };
+		ADC5FC97223FADDE00B23B0F /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +86,8 @@
 		ADBDAA1E223FA16B00F09D8C /* cinemaDribbleClone */ = {
 			isa = PBXGroup;
 			children = (
-				ADBDAA33223FA44B00F09D8C /* New Group */,
+				ADC5FC92223FA6FB00B23B0F /* View */,
+				ADBDAA33223FA44B00F09D8C /* Extension */,
 				ADBDAA1F223FA16B00F09D8C /* AppDelegate.swift */,
 				ADBDAA21223FA16B00F09D8C /* ViewController.swift */,
 				ADBDAA23223FA16B00F09D8C /* Main.storyboard */,
@@ -89,11 +98,22 @@
 			path = cinemaDribbleClone;
 			sourceTree = "<group>";
 		};
-		ADBDAA33223FA44B00F09D8C /* New Group */ = {
+		ADBDAA33223FA44B00F09D8C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				ADC5FC90223FA4FB00B23B0F /* View++Layout.swift */,
+				ADC5FC95223FA7B600B23B0F /* UILabel+extension.swift */,
+				ADC5FC97223FADDE00B23B0F /* UIStackView.swift */,
 			);
-			path = "New Group";
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		ADC5FC92223FA6FB00B23B0F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ADC5FC93223FA71300B23B0F /* MovieCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,10 +192,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-cinemaDribbleClone/Pods-cinemaDribbleClone-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,7 +230,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADC5FC96223FA7B600B23B0F /* UILabel+extension.swift in Sources */,
+				ADC5FC98223FADDE00B23B0F /* UIStackView.swift in Sources */,
 				ADBDAA22223FA16B00F09D8C /* ViewController.swift in Sources */,
+				ADC5FC91223FA4FB00B23B0F /* View++Layout.swift in Sources */,
+				ADC5FC94223FA71300B23B0F /* MovieCell.swift in Sources */,
 				ADBDAA20223FA16B00F09D8C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
