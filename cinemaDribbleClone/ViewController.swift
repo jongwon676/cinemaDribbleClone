@@ -1,20 +1,38 @@
-//
-//  ViewController.swift
-//  cinemaDribbleClone
-//
-//  Created by 성용강 on 18/03/2019.
-//  Copyright © 2019 성용강. All rights reserved.
-//
-
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController,
+UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    
+    let cellId = "cellId"
+    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+    let layout = UICollectionViewFlowLayout()
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        cell.backgroundColor = .yellow
+        
+        print(cell)
+        return cell
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        view.backgroundColor = .white
+        view.addSubview(collectionView)
+        
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        
     }
-
-
+    
 }
 

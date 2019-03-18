@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		938DF66A01E62C65F3C5AE51 /* Pods_cinemaDribbleClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09322CC726FC3B8ECEAADA3A /* Pods_cinemaDribbleClone.framework */; };
 		ADBDAA20223FA16B00F09D8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBDAA1F223FA16B00F09D8C /* AppDelegate.swift */; };
 		ADBDAA22223FA16B00F09D8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBDAA21223FA16B00F09D8C /* ViewController.swift */; };
 		ADBDAA25223FA16B00F09D8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADBDAA23223FA16B00F09D8C /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09322CC726FC3B8ECEAADA3A /* Pods_cinemaDribbleClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cinemaDribbleClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AD06FC4E3EFBA180D936087 /* Pods-cinemaDribbleClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cinemaDribbleClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-cinemaDribbleClone/Pods-cinemaDribbleClone.release.xcconfig"; sourceTree = "<group>"; };
+		715981ECC7B1D5E9C32E105E /* Pods-cinemaDribbleClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cinemaDribbleClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cinemaDribbleClone/Pods-cinemaDribbleClone.debug.xcconfig"; sourceTree = "<group>"; };
 		ADBDAA1C223FA16B00F09D8C /* cinemaDribbleClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cinemaDribbleClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBDAA1F223FA16B00F09D8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADBDAA21223FA16B00F09D8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				938DF66A01E62C65F3C5AE51 /* Pods_cinemaDribbleClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2614B53D507276383446F364 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				715981ECC7B1D5E9C32E105E /* Pods-cinemaDribbleClone.debug.xcconfig */,
+				5AD06FC4E3EFBA180D936087 /* Pods-cinemaDribbleClone.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8AF660181EA686EBCB0EBA6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09322CC726FC3B8ECEAADA3A /* Pods_cinemaDribbleClone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ADBDAA13223FA16B00F09D8C = {
 			isa = PBXGroup;
 			children = (
 				ADBDAA1E223FA16B00F09D8C /* cinemaDribbleClone */,
 				ADBDAA1D223FA16B00F09D8C /* Products */,
+				2614B53D507276383446F364 /* Pods */,
+				8AF660181EA686EBCB0EBA6B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +78,7 @@
 		ADBDAA1E223FA16B00F09D8C /* cinemaDribbleClone */ = {
 			isa = PBXGroup;
 			children = (
+				ADBDAA33223FA44B00F09D8C /* New Group */,
 				ADBDAA1F223FA16B00F09D8C /* AppDelegate.swift */,
 				ADBDAA21223FA16B00F09D8C /* ViewController.swift */,
 				ADBDAA23223FA16B00F09D8C /* Main.storyboard */,
@@ -64,6 +89,13 @@
 			path = cinemaDribbleClone;
 			sourceTree = "<group>";
 		};
+		ADBDAA33223FA44B00F09D8C /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +103,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADBDAA2E223FA16B00F09D8C /* Build configuration list for PBXNativeTarget "cinemaDribbleClone" */;
 			buildPhases = (
+				FFD48D3D042B749B1CB3DFF2 /* [CP] Check Pods Manifest.lock */,
 				ADBDAA18223FA16B00F09D8C /* Sources */,
 				ADBDAA19223FA16B00F09D8C /* Frameworks */,
 				ADBDAA1A223FA16B00F09D8C /* Resources */,
+				AF1591CD538B3050382784B3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +163,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AF1591CD538B3050382784B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-cinemaDribbleClone/Pods-cinemaDribbleClone-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cinemaDribbleClone/Pods-cinemaDribbleClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFD48D3D042B749B1CB3DFF2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cinemaDribbleClone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ADBDAA18223FA16B00F09D8C /* Sources */ = {
@@ -280,6 +353,7 @@
 		};
 		ADBDAA2F223FA16B00F09D8C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 715981ECC7B1D5E9C32E105E /* Pods-cinemaDribbleClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +372,7 @@
 		};
 		ADBDAA30223FA16B00F09D8C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AD06FC4E3EFBA180D936087 /* Pods-cinemaDribbleClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
