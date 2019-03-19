@@ -13,7 +13,7 @@ class MovieCell: UICollectionViewCell{
             ratingLabel.text = movie.flatMap { String($0.rating) }
             let imgUrl = movie?.imageUrl.flatMap { URL(string: $0) }
             movieImageView.sd_setImage(with: imgUrl)
-            starView.rating = movie?.rating ?? 2.5
+            starView.rating = (movie?.rating ?? 2.5) / 2
         }
     }
     

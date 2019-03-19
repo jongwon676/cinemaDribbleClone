@@ -20,8 +20,6 @@ class MovieDetailViewModel{
         return movie.asObservable().map { $0.imageUrl }
     }
     
-    
-    
     init(mv: Movie) {
         movie = Variable(mv)
     }

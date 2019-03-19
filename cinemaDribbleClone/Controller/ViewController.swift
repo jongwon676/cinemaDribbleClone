@@ -5,7 +5,10 @@ import RxSwift
 class ViewController: UIViewController, UICollectionViewDataSource {
     
     let movies: Variable<[Movie]> = Variable([])
-    let padding:CGFloat = 16
+    let padding: CGFloat = 16
+    let indicator = UIActivityIndicatorView()
+    
+    
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
     let layout = UICollectionViewFlowLayout()
     let bag = DisposeBag()
@@ -25,18 +28,30 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         return cell
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-        view.addSubview(collectionView)
-        
-        
-        collectionView.backgroundColor = #colorLiteral(red: 0.04572060704, green: 0.07732533664, blue: 0.1312836409, alpha: 1)
+    fileprivate func setupCollectionView() {
+        collectionView.backgroundColor = .clear
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(MovieCell.self, forCellWithReuseIdentifier: MovieCell.cellId)
-        collectionView.fillSuperView(superView: view)
+        collectionView.snp.makeConstraints { (mk) in
+            mk.edges.equalTo(view.safeAreaLayoutGuide)
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = #colorLiteral(red: 0.04572060704, green: 0.07732533664, blue: 0.1312836409, alpha: 1)
+        view.addSubview(collectionView)
+        
+        indicator.fillSuperView(superView: view)
+        indicator.startAnimating()
+        
+        setupCollectionView()
+        
         
         movies.asObservable()
         .observeOn(MainScheduler.instance)
@@ -45,11 +60,16 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         })
         .disposed(by: bag)
         
-        let fetchedMovies = Service.movies
+        let fetchedMovies = Service.movies.share(replay: 1)
         
         fetchedMovies
             .bind(to: movies)
             .disposed(by: bag)
+        
+        fetchedMovies.observeOn(MainScheduler.instance)
+        .subscribe(onNext: { _ in
+            self.indicator.stopAnimating()
+        }).disposed(by: bag)
 
     }
 }

@@ -21,6 +21,8 @@
 		ADC5FC9E224053D000B23B0F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5FC9D224053D000B23B0F /* Movie.swift */; };
 		ADC5FCA02240551100B23B0F /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5FC9F2240551100B23B0F /* MovieDetailViewModel.swift */; };
 		ADC5FCA32240621800B23B0F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5FCA22240621800B23B0F /* Service.swift */; };
+		ADC5FCA522408FDF00B23B0F /* UIImage++.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5FCA422408FDF00B23B0F /* UIImage++.swift */; };
+		ADC5FCA722408FEB00B23B0F /* UIColor++.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5FCA622408FEB00B23B0F /* UIColor++.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		ADC5FC9D224053D000B23B0F /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		ADC5FC9F2240551100B23B0F /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
 		ADC5FCA22240621800B23B0F /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		ADC5FCA422408FDF00B23B0F /* UIImage++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage++.swift"; sourceTree = "<group>"; };
+		ADC5FCA622408FEB00B23B0F /* UIColor++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor++.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 				ADC5FC90223FA4FB00B23B0F /* View++Layout.swift */,
 				ADC5FC95223FA7B600B23B0F /* UILabel+extension.swift */,
 				ADC5FC97223FADDE00B23B0F /* UIStackView.swift */,
+				ADC5FCA422408FDF00B23B0F /* UIImage++.swift */,
+				ADC5FCA622408FEB00B23B0F /* UIColor++.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -279,8 +285,10 @@
 				ADBDAA22223FA16B00F09D8C /* ViewController.swift in Sources */,
 				ADC5FC91223FA4FB00B23B0F /* View++Layout.swift in Sources */,
 				ADC5FC94223FA71300B23B0F /* MovieCell.swift in Sources */,
+				ADC5FCA722408FEB00B23B0F /* UIColor++.swift in Sources */,
 				ADC5FCA02240551100B23B0F /* MovieDetailViewModel.swift in Sources */,
 				ADBDAA20223FA16B00F09D8C /* AppDelegate.swift in Sources */,
+				ADC5FCA522408FDF00B23B0F /* UIImage++.swift in Sources */,
 				ADC5FCA32240621800B23B0F /* Service.swift in Sources */,
 				ADC5FC9E224053D000B23B0F /* Movie.swift in Sources */,
 				ADC5FC9B223FB79000B23B0F /* DetailViewController.swift in Sources */,
