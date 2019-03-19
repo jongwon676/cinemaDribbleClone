@@ -1,9 +1,21 @@
 import UIKit
 import SnapKit
 import Cosmos
+import SDWebImage
 
 class MovieCell: UICollectionViewCell{
     static let cellId = "MovieCell"
+    var movie: Movie? {
+        didSet{
+            movieNameLabel.text = movie?.title
+            descriptionLabel.text = movie?.description
+            durationLabel.text = movie.flatMap { String($0.runtime) }
+            ratingLabel.text = movie.flatMap { String($0.rating) }
+            let imgUrl = movie?.imageUrl.flatMap { URL(string: $0) }
+            movieImageView.sd_setImage(with: imgUrl)
+            starView.rating = movie?.rating ?? 2.5
+        }
+    }
     
     
     lazy var movieImageView: UIImageView = {
@@ -43,10 +55,6 @@ class MovieCell: UICollectionViewCell{
         let hStackView = UIStackView(arrangedSubviews: [movieImageView, vStackView], spacing: 10)
         movieImageView.constraintWidth(90)
         hStackView.fillSuperView(superView: self, padding: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
-        movieNameLabel.text = "Fright Night"
-        descriptionLabel.text = "Actor: Jeremy Piven, Bridget Moynahan Director: Peter Chelsom"
-        durationLabel.text =  "1 h 56min"
-        ratingLabel.text = "8.5"
         
         
         self.addSubview(ratingLabel)
